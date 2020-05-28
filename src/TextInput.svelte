@@ -19,6 +19,11 @@
         type="url"
         placeholder={placeholder}
         bind:value={value}/>
+{:else if type === 'search'}
+    <input 
+        type="search"
+        placeholder={placeholder}
+        bind:value={value}/>
 {:else}
     <input 
         type="text"

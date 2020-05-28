@@ -67,6 +67,16 @@
             </Button>
         </section>
     </CardView>
+    <CardView>
+        <section style="width: 300px; display: flex;">
+            <button style="width: 32px;">1</button>
+            <button style="width: 32px;">1</button>
+            <button style="width: 32px;">1</button>
+            <button style="width: 32px;">1</button>
+            <button style="width: 32px;">1</button>
+            <button style="width: 32px;">1</button>
+        </section>
+    </CardView>
 </CardManager>
 {/if}
 
