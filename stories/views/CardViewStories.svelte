@@ -31,7 +31,8 @@
         <section>
             <h1>Do not press the button</h1>
             <br>
-            <div class={`animation ${showStuff && 'show'}`}>
+            {#if showStuff}
+            <div>
                 <p>Why did you do it? Why did you do it? Why did you do it?</p>
                 <p>Why did you do it? Why did you do it? Why did you do it?</p>
                 <p>Why did you do it? Why did you do it? Why did you do it?</p>
@@ -40,6 +41,7 @@
                 <p>Why did you do it? Why did you do it? Why did you do it?</p>
                 <br>
             </div>
+            {/if}
             <Button @click={() => showStuff = !showStuff}>Click me</Button>
         </section>
     </CardView>
@@ -65,14 +67,5 @@
     fieldset {
         border: none;
         outline: none;
-    }
-    .animation {
-        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-        width: 0px;
-        height: 0px;
-    }
-    .animation.show {
-        width: fit-content;
-        height: fit-content;
     }
 </style>
