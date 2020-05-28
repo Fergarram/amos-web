@@ -1,3 +1,5 @@
 # Amos UI
 
-WIP
+Ideas:
+* Spacing component
+* Minimal CSS - Rigid predefined layout/grid system

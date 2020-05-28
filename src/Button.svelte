@@ -1,13 +1,30 @@
 <script>
     export let click = () => {};
     export let variant = 'primary';
+    export let size = 'medium';
 </script>
 
-<button class={variant} on:click={click}>
+<button class={`${variant} ${size}`} on:click={click}>
     <slot></slot>
 </button>
 
 <style>
+    .expand {
+        font-size: 0.85rem;
+        padding: 0.25rem 1.125rem;
+        flex-grow: 1;
+    }
+    .medium {
+        font-size: 0.85rem;
+        padding: 0.25rem 1.125rem;
+    }
+    .danger {
+        background: rgb(161, 37, 37);
+        color: #ffffff;
+    }
+    .danger:active {
+        background: rgb(128, 24, 24);
+    }
     .primary {
         background: #E7C396;
         color: #222222;
@@ -23,8 +40,6 @@
         background: rgb(180, 180, 180);
     }
     button {
-        font-size: 0.85rem;
-        padding: 0.25rem 1.125rem;
         cursor: pointer;
         font-weight: 500;
         border-radius: 3px;

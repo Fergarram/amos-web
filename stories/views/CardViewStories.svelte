@@ -1,15 +1,15 @@
 <script>
     import CardView from '../../src/CardView';
     import CardManager from '../../src/CardManager';
-    import Input from '../../src/Input';
+    import TextInput from '../../src/TextInput';
+    import Slider from '../../src/Slider';
     import Button from '../../src/Button';
     
     export let story = 'multiple';
     let showStuff = false;
-
-    const loginButtonPressed = (event) => {
-        event.preventDefault();
-    };
+    let slideVal = 40;
+    let email = '';
+    let password = '';
 </script>
 
 {#if story === 'multiple'}
@@ -18,12 +18,23 @@
         <section>
             <h1>Form Example</h1>
             <form>
-                <Input type="email" placeholder="E-Mail" />
-                <Input type="password" placeholder="Password" />
-                <fieldset>
-                    <Button click={loginButtonPressed}>Log in</Button>
-                    <Button variant="secondary" click={loginButtonPressed}>Clear</Button>
-                </fieldset>
+                <TextInput type="email" placeholder="E-Mail" bind:value={email} />
+                <TextInput type="password" placeholder="Password" bind:value={password} />
+                <div class="buttonset">
+                    <Button size="expand" click={(e)=>e.preventDefault()}>
+                        Log in
+                    </Button>
+                    <span aria-hidden="true" style="width: 0.5rem;"></span>
+                    <Button size="expand"
+                            variant="secondary"
+                            click={(e) => {
+                                e.preventDefault();
+                                email = '';
+                                password = '';
+                            }}>
+                        Clear
+                    </Button>
+                </div>
             </form>
         </section>
     </CardView>
@@ -32,24 +43,28 @@
             <h1>Do not press the button</h1>
             <br>
             {#if showStuff}
-            <div>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <p>Why did you do it? Why did you do it? Why did you do it?</p>
-                <br>
-            </div>
+            <p>{slideVal * 665}</p>
+            <br>
             {/if}
-            <Button @click={() => showStuff = !showStuff}>Click me</Button>
+            <div style="display: flex;">
+                <Button size="expand" click={() => showStuff = !showStuff}>Click me</Button>
+            </div>
         </section>
     </CardView>
     <CardView>
         <section>
             <h1>Nothing</h1>
             <p>Really special here.</p>
-            <Input type="range" min="1" max="100" value="30"/>
+            <div style="display: flex;">
+                <Slider size="expand" bind:value={slideVal}/>
+            </div>
+            <Button variant="danger"
+                    click={() => {
+                        email = "not an email";
+                        password = slideVal * 665;
+                    }}>
+                Delete
+            </Button>
         </section>
     </CardView>
 </CardManager>
@@ -64,7 +79,8 @@
         font-size: 1.25rem;
         font-weight: bold;
     }
-    fieldset {
+    .buttonset {
+        display: flex;
         border: none;
         outline: none;
     }
