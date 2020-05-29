@@ -4,6 +4,7 @@
     import TextInput from '../../src/TextInput';
     import Slider from '../../src/Slider';
     import Button from '../../src/Button';
+    import Checkbox from '../../src/Checkbox';
     
     export let story = 'multiple';
     let showStuff = false;
@@ -67,14 +68,12 @@
             </Button>
         </section>
     </CardView>
-    <CardView>
-        <section style="width: 300px; display: flex;">
-            <button style="width: 32px;">1</button>
-            <button style="width: 32px;">1</button>
-            <button style="width: 32px;">1</button>
-            <button style="width: 32px;">1</button>
-            <button style="width: 32px;">1</button>
-            <button style="width: 32px;">1</button>
+    <CardView x={200}>
+        <section>
+            <Checkbox label="Bake lighting" />
+            <Checkbox label="Enable shadows" />
+            <Checkbox label="Scale" />
+            <Checkbox label="Another toggle" />
         </section>
     </CardView>
 </CardManager>

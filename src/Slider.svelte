@@ -1,5 +1,4 @@
 <script>
-    export let placeholder = '';
     export let min = 0;
     export let max = 100;
     export let value = '';
@@ -8,7 +7,6 @@
 
 <input type="range"
        class={size}
-       placeholder={placeholder}
        min={min}
        max={max}
        bind:value={value}/>

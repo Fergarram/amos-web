@@ -6,7 +6,6 @@ For example, game editors. This aims to be a solution for those quick things I w
 Now, the cards might not be always needed. So, the individual components could be used outside of cards.
 
 Ideas:
-* Desktop / Tablet Centric
 * Icons
 * Spacing component
 * Checkboxes
@@ -14,11 +13,12 @@ Ideas:
 * Number
 * Color picker
 * Select / Dropdown
+
 * Minimal CSS - Rigid predefined layout/grid system
 * Snap back to original position
 * Snap to possible places
-* Graphs
-* Quickly changing numbers - performance hit?
+* Graphs - fast numbers?
+* Desktop / Tablet Centric
 
 Competitors:
 * http://workshop.chromeexperiments.com/examples/gui/#1--Basic-Usage
