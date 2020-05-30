@@ -3,10 +3,12 @@
     export let max = 100;
     export let value = '';
     export let size = '';
+    export let behavior = '';
 </script>
 
 <input type="range"
-       class={size}
+       non-draggable
+       class={`${size} ${behavior}`}
        min={min}
        max={max}
        bind:value={value}/>

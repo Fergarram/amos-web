@@ -26,7 +26,7 @@
     <input type="checkbox"
            id={inputId}
            bind:checked={checked}/>
-    <label for={inputId}>{label}</label>
+    <label non-draggable for={inputId}>{label}</label>
 </div>
 
 <style>

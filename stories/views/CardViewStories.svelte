@@ -22,11 +22,11 @@
                 <TextInput type="email" placeholder="E-Mail" bind:value={email} />
                 <TextInput type="password" placeholder="Password" bind:value={password} />
                 <div class="buttonset">
-                    <Button size="expand" click={(e)=>e.preventDefault()}>
+                    <Button behavior="expand" click={(e)=>e.preventDefault()}>
                         Log in
                     </Button>
                     <span aria-hidden="true" style="width: 0.5rem;"></span>
-                    <Button size="expand"
+                    <Button behavior="expand"
                             variant="secondary"
                             click={(e) => {
                                 e.preventDefault();
@@ -48,23 +48,31 @@
             <br>
             {/if}
             <div style="display: flex;">
-                <Button variant="danger" size="expand" click={() => showStuff = !showStuff}>Click me</Button>
+                <Button variant="danger" behavior="expand" click={() => showStuff = !showStuff}>Click me</Button>
             </div>
         </section>
     </CardView>
     <CardView>
         <section>
-            <h1>Nothing</h1>
-            <p>Really special here.</p>
-            <div style="display: flex;">
-                <Slider size="expand" bind:value={slideVal}/>
+            <h1>regenerationRate</h1>
+            <div class="labeledInput">
+                <label>Value:</label>
+                <TextInput size="short" behavior="expand" bind:value={slideVal} />
             </div>
-            <Button click={() => {
-                        email = "not an email";
-                        password = slideVal * 665;
-                    }}>
-                Configure
-            </Button>
+            <div style="display: flex;">
+                <Slider behavior="expand" bind:value={slideVal}/>
+            </div>
+            <div class="buttonset">
+                <Button behavior="expand" variant="secondary">
+                    Reset
+                </Button>
+                <span aria-hidden="true"
+                    style="width: 0.5rem;">
+                </span>
+                <Button behavior="expand" click={(e)=>e.preventDefault()}>
+                    Save
+                </Button>
+            </div>
         </section>
     </CardView>
     <CardView x={200}>
@@ -79,6 +87,14 @@
 {/if}
 
 <style>
+    .labeledInput {
+        margin-top: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+    .labeledInput label {
+        margin-right: 1rem;
+    }
     * {
         margin: 0;
         padding: 0;

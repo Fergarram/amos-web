@@ -2,36 +2,50 @@
     export let placeholder = '';
     export let value = '';
     export let type = 'text';
+    export let size = '';
+    export let behavior = '';
 </script>
 
 {#if type === 'password'}
     <input 
         type="password"
+        non-draggable
         placeholder={placeholder}
         bind:value={value}/>
 {:else if type === 'email'}
     <input 
         type="email"
+        non-draggable
         placeholder={placeholder}
         bind:value={value}/>
 {:else if type === 'url'}
     <input 
         type="url"
+        non-draggable
         placeholder={placeholder}
         bind:value={value}/>
 {:else if type === 'search'}
     <input 
         type="search"
+        non-draggable
         placeholder={placeholder}
         bind:value={value}/>
 {:else}
     <input 
         type="text"
+        non-draggable
+        class={`${size} ${behavior}`}
         placeholder={placeholder}
         bind:value={value}/>
 {/if}
 
 <style>
+    .short {
+        width: 100px;
+    }
+    .expand {
+        flex-grow: 1;
+    }
     input {
         display: block;
         margin: 0.5rem 0;

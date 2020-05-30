@@ -31,14 +31,13 @@
     const dragMouseDown = (e) => {
         pos3 = e.clientX;
         pos4 = e.clientY;
+        let isDraggable = e.target.getAttribute('non-draggable') === null;
 
         moveCard(cardId);
 
         document.onmousemove = (e) => {
 
-            let triggeredFromTagName = e.currentTarget.activeElement.localName;
-            if (triggeredFromTagName !== "input"
-                && triggeredFromTagName !== "button") {
+            if (isDraggable) {
                 pos1 = pos3 - e.clientX;
                 pos2 = pos4 - e.clientY;
                 pos3 = e.clientX;

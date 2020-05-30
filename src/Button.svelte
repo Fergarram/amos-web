@@ -2,20 +2,20 @@
     export let click = () => {};
     export let variant = 'primary';
     export let size = 'medium';
+    export let behavior = '';
 </script>
 
-<button class={`${variant} ${size}`} on:click={click}>
+<button class={`${variant} ${size} ${behavior}`}
+        non-draggable
+        on:click={click}>
     <slot></slot>
 </button>
 
 <style>
     .expand {
-        font-size: 0.85rem;
-        padding: 0.25rem 1.125rem;
         flex-grow: 1;
     }
     .medium {
-        font-size: 0.85rem;
         padding: 0.25rem 1.125rem;
     }
     .danger {
@@ -40,6 +40,7 @@
         background: rgb(180, 180, 180);
     }
     button {
+        font-size: 0.85rem;
         cursor: pointer;
         font-weight: 400;
         border-radius: 3px;
