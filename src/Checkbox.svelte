@@ -49,7 +49,7 @@
         left: 1rem;
         margin-top: -1px;
 
-        border: 3px solid #E7C396;
+        border: 3px solid #79899250;
         box-shadow: 0 1px 3px rgba(240, 180, 180, 0.12), 0 1px 2px rgba(0,0,0,0.24);
         border-radius: 0.4rem;
         background: rgb(240, 240, 240);
@@ -62,8 +62,8 @@
         content: "";
         opacity: 0;
 
-        border-left: 3px solid #404040;
-        border-bottom: 3px solid #404040;
+        border-left: 3px solid #4a5b63;
+        border-bottom: 3px solid #4a5b63;
         
         transform: rotate(-45deg);
         left: 1.25rem;
@@ -76,7 +76,6 @@
     }
     label:active::before {
         transform: scale(1.05, 1.05);
-        border-color: #72AEFC;
     }
     label:focus {
         outline: none;

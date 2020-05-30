@@ -14,6 +14,8 @@ Ideas:
 * Color picker
 * Select / Dropdown
 
+* Add setting to disable scale animation.
+* Add setting to disable shadows.
 * Minimal CSS - Rigid predefined layout/grid system
 * Snap back to original position
 * Snap to possible places

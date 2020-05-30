@@ -19,18 +19,18 @@
         padding: 0.25rem 1.125rem;
     }
     .danger {
-        background: rgb(161, 37, 37);
+        background: #B34849;
         color: #ffffff;
     }
     .danger:active {
-        background: rgb(128, 24, 24);
+        background: #962426;
     }
     .primary {
-        background: #E7C396;
-        color: #222222;
+        background: #4a5b63;
+        color: #ffffff;
     }
     .primary:active {
-        background: #d8a950;
+        background: #2e363a;
     }
     .secondary {
         background: rgb(218, 218, 218);
@@ -41,7 +41,7 @@
     }
     button {
         cursor: pointer;
-        font-weight: 500;
+        font-weight: 400;
         border-radius: 3px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
                     0 1px 2px rgba(0,0,0,0.24);

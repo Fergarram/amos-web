@@ -48,7 +48,7 @@
             <br>
             {/if}
             <div style="display: flex;">
-                <Button size="expand" click={() => showStuff = !showStuff}>Click me</Button>
+                <Button variant="danger" size="expand" click={() => showStuff = !showStuff}>Click me</Button>
             </div>
         </section>
     </CardView>
@@ -59,12 +59,11 @@
             <div style="display: flex;">
                 <Slider size="expand" bind:value={slideVal}/>
             </div>
-            <Button variant="danger"
-                    click={() => {
+            <Button click={() => {
                         email = "not an email";
                         password = slideVal * 665;
                     }}>
-                Delete
+                Configure
             </Button>
         </section>
     </CardView>
