@@ -15,18 +15,17 @@ It is also important to mention that this is a desktop/tablet centric toolkit so
 
 I decided to use Svelte since I like the idea of not having a framework living in your frontend.
 
-Ideas:
+TODO:
 * Icons
 * Spacing component
-* Checkboxes
 * Radio Buttons
-* Number
+* Number Input
 * Color picker
-* Select / Dropdown
-
-* Add setting to disable scale animation.
-* Add setting to disable shadows.
-* Minimal CSS - Rigid predefined layout/grid system
+* Date picker
+* Select
+* Input Dropdown
+* Curve editor
+* Formalize a layout system
 * Snap back to original position
-* Snap to possible places
-* Graphs - fast numbers?
+* Snap to adjacent cards
+* Graphs and other visualization tools that require constant update
