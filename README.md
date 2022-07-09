@@ -1,4 +1,4 @@
-# Amos UI
+# Amos Web
 
 >Disclaimer: This is in a very early stage. The following notes are not meant to be understood by anyone else but myself. Otherwise, thanks for passing by!
 
