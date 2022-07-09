@@ -2,6 +2,8 @@
 
 >Disclaimer: This is in a very early stage. The following notes are not meant to be understood by anyone else but myself. Otherwise, thanks for passing by!
 
+>Edit: This is very outdated, I have an improved version that I haven't bothered to push yet since it's not yet finished.
+
 ## Thoughts
 My intentions for this project are unknown. I just felt the need to extract and update the old 'void' project that I had.
 
